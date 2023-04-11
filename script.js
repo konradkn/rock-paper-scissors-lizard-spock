@@ -5,16 +5,23 @@ let possibleChoices = document.querySelectorAll("button");
 let resetButtonSelector = document.getElementById("reset-button");
 let scoreSelectorPlayer = document.getElementById("score");
 let scoreSelectorComputer = document.getElementById("score-computer");
+let roundWinnerSelector = document.getElementById('round-winner')
+
+////////////////////////////////////////
+let imagesContainerSelector = document.getElementById('icons-container')
 
 let userChoice;
 let computerChoice;
 let matchResult;
 let counter = 0;
 let counterComputer = 0;
+let roundResult;
 
 let resetButton = () => {
   document.location.reload();
 };
+
+let disabledButtons = []
 
 possibleChoices.forEach((choice) =>
   choice.addEventListener("click", (e) => {
@@ -24,8 +31,38 @@ possibleChoices.forEach((choice) =>
     computerChoiceGenerator();
     getResult();
     updateScore();
+
+    //check if all buttons are disabled to give the the final result in each round
+    disabledButtons.push(e.target.disabled)
+    console.log(disabledButtons)
+    if(disabledButtons.length === 5) {
+      roundWinner()
+    }
+
   })
 );
+
+
+const roundWinner = () => {
+  if(counter < counterComputer) {
+    roundResult = 'computer won!' 
+  } else if(counter > counterComputer){
+    roundResult = 'you won!'
+  } else {
+    roundResult = 'nobody won!'
+  }
+
+  roundWinnerSelector.innerHTML = roundResult;
+  // roundResult.style.color = "#19ff66"
+  if(roundResult.includes('you')) {
+    roundWinnerSelector.style.color = "#19ff66"
+  } else if(roundResult.includes('computer')) {
+    roundWinnerSelector.style.color = "#ff3f3f"
+  } else if(roundResult.includes('nobody')){
+    roundWinnerSelector.style.color = "#ffffff"
+  }
+};
+
 
 resetButtonSelector.addEventListener("click", resetButton);
 

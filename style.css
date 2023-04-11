@@ -69,6 +69,11 @@ main {
     border-radius: 6px;
 }
 
+.round-winner {
+    font-size: 3rem;
+    /* background-color: #ff3f3f; */
+}
+
 .buttons-container {
     display: flex;
     justify-content: space-around;
@@ -96,6 +101,7 @@ button:hover {
 
 #reset-button {
     margin-top: 0.5rem;
+    margin-bottom: 6rem;
     outline: none;
     border: none;
     color: #ffffff;
@@ -103,6 +109,7 @@ button:hover {
     padding: 1.2rem 10rem;
     border-radius: 10px;
     cursor: pointer;
+    user-select: none;
     font-family: 'Rubik Mono One', sans-serif;
     font-size: 1rem;
     width: 34rem;
@@ -151,6 +158,7 @@ button:hover {
     justify-content: space-between;
     background-color: #242424;
     padding: 2rem;
+    user-select: none;
 }
 
 .main-score-container h2 {
@@ -167,9 +175,177 @@ button:hover {
     user-select: no;
 }
 
+/* rock, paper, scissors, lizard, spock icons  */
+
+.rock-icon {
+    background-color: transparent;
+    background-image: url('./images/rock.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.paper-icon {
+    background-color: transparent;
+    background-image: url('./images/paper.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.scissors-icon {
+    background-color: transparent;
+    background-image: url('./images/scissors.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.lizard-icon {
+    background-color: transparent;
+    background-image: url('./images/lizard.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.spock-icon {
+    background-color: transparent;
+    background-image: url('./images/spock.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
 /* footer */
+
 footer {
     background-color: #464646;
-    height: 5rem;
-    margin-top: 5rem;
+    height: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.github-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 14rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.fa-github {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.fa-github:hover {
+    color: #ff9640;
+}
+
+.created-with {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    font-size: 2rem;
+}
+
+.created-with h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.fa-square-js {
+    color: #fffb1b;
+}
+
+.fa-html5 {
+    color: #ff3f3f;
+}
+
+.fa-css3-alt {
+    color: #3496ff;
+}
+
+@media  only screen and (max-width: 970px) {
+
+    header {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .description-container {
+        padding: 1.6rem;
+    }
+
+    .main-game {
+        width: 18rem;
+    }
+
+    .buttons-container {
+        width: 18rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    button {
+        margin-top: 0.2rem;
+        padding: 0.2rem;
+        border-radius: 4px;
+    }
+
+    #reset-button {
+        width: 22rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .created-with {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .created-with h3 {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .title-container {
+        width: 15rem;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .github-page {
+        font-size: 0.9rem;
+        width: 30%;
+        padding-top: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+
+    .created-with {
+        font-size: 1.3rem;
+        width: 30%;
+        /* background-color: #242424; */
+        padding: 2rem;
+    }
 }
