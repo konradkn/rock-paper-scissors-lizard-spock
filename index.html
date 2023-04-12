@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Oxanium:wght@300;400;700&family=Rubik+Mono+One&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,900;1,300;1,500&display=swap"
         rel="stylesheet">
-        <script src="https://kit.fontawesome.com/5b9e766167.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5b9e766167.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Rock, Paper, Scissors</title>
 </head>
@@ -27,47 +27,53 @@
             <div class="description-container">
                 <p class="first-p">This is a game based on the popular TV Show, The Big Bang Theory, the game is
                     actually really simple, as Sheldon said: </p><br>
-                    
-                    <p class="first-p">"Scissors cuts paper, paper covers rock, rock crushes
+
+                <p class="first-p">"Scissors cuts paper, paper covers rock, rock crushes
                     lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats
                     paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors."
                 </p><br>
                 <p>You have 5 chances to choose -one of each- against the computer, or as in the show would happen,
-                    everyone would end up choosing Spock everytime (but you could just restart anytime you want, who wouldn't want to be Spock?)</p>
+                    everyone would end up choosing Spock everytime (but you could just restart anytime you want, who
+                    wouldn't want to be Spock?)</p>
             </div>
         </section>
-        <div class="main-game">
+        <h2 class="round-winner" id="round-winner"></h2>
+
+        <div class="buttons-container">
+            <button id="Rock" class="button">Rock</button>
+            <button id="Paper" class="button">Paper</button>
+            <button id="Scissors" class="button">Scissors</button>
+            <button id="Lizard" class="button">Lizard</button>
+            <button id="Spock" class="button">Spock</button>
+        </div>
+        <div class="main-game" id="main-game">
             <h2 class="computer-choice-title">Computer choice: <span id="computer-choice"></span></h2>
+            <div class="icons-container" id="icons-container"></div>
             <h2 class="user-choice-title">Your choice: <span id="user-choice"></span></h2>
+            <div class="icons-container-user" id="icons-container-user"></div>
+
             <h2 class="result-title">Result: <span id="result"></span></h2>
 
-            <div class="buttons-container">
-                <button id="Rock" class="button">Rock</button>
-                <button id="Paper" class="button">Paper</button>
-                <button id="Scissors" class="button">Scissors</button>
-                <button id="Lizard" class="button">Lizard</button>
-                <button id="Spock" class="button">Spock</button>
-            </div>
 
-            <div id="icons-container"></div>
+
 
             <div class="main-score-container">
                 <div class="score-container">
                     <h2>Your score is:</h2>
                     <h3 id="score">0</h3>
                 </div>
+                <h3 class="vs-title">VS</h3>
                 <div class="score-container">
                     <h2>Computer score is:</h2>
                     <h3 id="score-computer">0</h3>
                 </div>
             </div>
-            <h2 class="round-winner" id="round-winner"></h2>
 
 
 
         </div>
         <div class="reset-button-container">
-            <input type="button" value="Restart Game" id="reset-button">
+            <input type="button" value="Restart" id="reset-button">
         </div>
     </main>
 
