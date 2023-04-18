@@ -284,7 +284,7 @@ footer {
   color: #3496ff;
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1500px) {
   header {
     width: 100%;
     font-size: 0.8rem;
@@ -293,19 +293,30 @@ footer {
     padding: 1.6rem;
   }
 
+  .main-score-container {
+    display: none;
+  }
+
+  .result-title {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
   .main-game {
     width: 18rem;
+    height: 300px;
   }
 
   .buttons-container {
     width: 18rem;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .button {
-    border: solid #ff7300 2px;
+    /* border: solid #ff7300 2px; */
+    height: 5rem;
   }
 
   button {
@@ -318,7 +329,45 @@ footer {
     width: 22rem;
     display: flex;
     justify-content: center;
+    height: 3rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
   }
+
+  .round-winner {
+    font-size: 1.5rem;
+    padding-bottom: 70px;
+    height: 0;
+  }
+
+  /* icons */
+
+  .paper-icon {
+    width: 35px;
+    height: 50px;
+  }
+
+  .rock-icon {
+    width: 35px;
+    height: 50px;
+  }
+
+  .lizard-icon {
+    width: 35px;
+    height: 50px;
+  }
+
+  .scissors-icon {
+    width: 35px;
+    height: 50px;
+  }
+
+  .spock-icon {
+    width: 35px;
+    height: 50px;
+  }
+
+  /* icons */
 
   .created-with {
     display: flex;
