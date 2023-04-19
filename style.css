@@ -308,21 +308,24 @@ footer {
   }
 
   .buttons-container {
-    width: 18rem;
+    /* width: 18rem; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
 
   .button {
-    /* border: solid #ff7300 2px; */
+    border: solid #373737 1px;
     height: 5rem;
+    /* background-color: #ff7300; */
   }
 
   button {
     margin-top: 0.2rem;
     padding: 0.2rem;
-    border-radius: 4px;
+    /* border-radius: 4px; */
+    /* color: #ffffff; */
+    font-weight: bold;
   }
 
   #reset-button {
@@ -338,6 +341,7 @@ footer {
     font-size: 1.5rem;
     padding-bottom: 70px;
     height: 0;
+    padding-right: 0;
   }
 
   /* icons */
@@ -353,13 +357,13 @@ footer {
   }
 
   .lizard-icon {
-    width: 35px;
-    height: 50px;
+    width: 42px;
+    height: 46px;
   }
 
   .scissors-icon {
-    width: 35px;
-    height: 50px;
+    width: 41px;
+    height: 41px;
   }
 
   .spock-icon {
@@ -409,5 +413,9 @@ footer {
     width: 30%;
     /* background-color: #242424; */
     padding: 2rem;
+  }
+
+  #Spock {
+    border-top-right-radius: 20px;
   }
 }
